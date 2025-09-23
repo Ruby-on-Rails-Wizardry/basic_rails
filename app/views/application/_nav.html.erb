@@ -1,0 +1,14 @@
+<nav>
+  <div>
+    <%= link_to "Home", root_path %>
+  </div>
+  <div>Basic Rails</div>
+  <div>
+    <% if authenticated? %>
+      <%= button_to "Log out", session_path, method: :delete  %>
+    <% else %>
+      <%= link_to "Sign In", new_session_path %>
+      <%= link_to "Sign Up", new_registration_path %>
+    <% end %>
+  </div>
+</nav>
