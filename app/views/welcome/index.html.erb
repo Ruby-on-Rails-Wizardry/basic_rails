@@ -1,3 +1,7 @@
 
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
+
+<%= cookies[:time_zone] %>
+<%= Time.zone.abbr(Time.now) %>
+<%= Time.zone.now %>
