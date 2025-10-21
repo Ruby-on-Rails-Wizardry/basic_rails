@@ -3,8 +3,9 @@
     <%= link_to "Home", root_path %>
   </div>
   <div>Basic Rails</div>
-  <div>
+  <div style="display: flex">
     <% if authenticated? %>
+      <div style="padding-right: 10px"><%= Current.user %> </div>
       <%= button_to "Log out", session_path, method: :delete  %>
     <% else %>
       <%= link_to "Sign In", new_session_path %>
